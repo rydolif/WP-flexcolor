@@ -1,0 +1,535 @@
+
+@media only screen and (max-width : 1201px)
+
+	.header
+
+		&--active
+			nav
+				top: 72px
+
+			.header__catalog
+				top: 0
+
+		&__toggle
+			margin-right: 0
+
+		&__left
+			padding-right: 75px
+
+			a
+				margin-right: 25px
+
+		&__catalog
+			width: 750px
+			top: 0
+			left: -345%
+
+		&__article
+
+			&_category
+				h4
+					padding-left: 15px
+
+				a
+					padding: 0 15px
+
+	.nav
+		position: fixed
+		display: block
+		width: 220px
+		height: 100%
+		flex-direction: column
+		text-align: center
+		right: -100%
+		top: 92px
+		z-index: -1
+		background: rgba(#fff, .8)
+		transition: all .3s
+		padding: 20px 0px
+		overflow: visible
+
+		ul
+			display: flex
+			flex-direction: column
+			justify-content: center
+			margin-top: 40px
+
+		li
+			margin: 0
+			margin-bottom: 10px
+
+		a
+			color: $text
+		
+		&--active
+			right: 0
+
+	.hamburger
+		display: block
+
+	.hero
+		z-index: 1
+
+		img
+			top: 15%
+			right: 0
+			z-index: -1
+
+			&:nth-child(2)
+				display: none
+
+			&:nth-child(3)
+				display: none
+
+	.hits
+		padding: 30px 0 120px
+
+		h3
+			margin-bottom: 40px
+
+		p
+			text-align: center
+
+		.swiper-slide
+
+			a
+				display: flex
+				flex-direction: column
+				align-items: center
+
+			img
+				width: 85%
+
+			div
+				right: 25px
+
+	.tabs
+
+		h3
+			margin-bottom: 40px
+
+		.swiper-slide
+
+			a
+				display: flex
+				flex-direction: column
+				align-items: center
+
+			img
+				width: 85%
+
+			div
+				right: 25px
+
+	.reviews
+
+		&__container
+			flex-direction: column
+
+			h3
+				margin-bottom: 40px
+
+		&__left,
+		&__right
+			width: 100%
+
+		&__left
+			margin-bottom: 25px
+
+			.chat__content
+				padding-right: 35px
+				width: 100%
+
+				span
+					font-size: 80px
+					top: -30px
+
+		&__form
+			textarea
+				height: 180px !important
+
+			&_up
+				justify-content: space-between
+
+		&__btn
+			margin-top: 30px
+
+	.contacts
+		padding: 120px 0 80px
+
+	.footer
+		&__up
+			a
+				right: 20px
+
+	.contacts
+		&__left
+			padding-left: 40px
+
+
+@media only screen and (max-width : 992px)
+
+	.header
+
+		&__catalog
+			width: 530px
+			left: -243%
+
+			&--active
+
+			a
+				padding: 0 10px
+
+		&__article
+			flex-wrap: wrap
+
+			&_category
+				width: 48%
+				h4
+					padding-bottom: 15px
+
+	.nav
+		ul
+			margin-top: 10px
+
+	.hero
+
+		img
+			right: -13%
+
+	.tabs
+		padding-bottom: 120px
+
+	.reviews
+		padding-bottom: 50px
+
+	.footer
+
+		&__nav
+			flex-direction: column
+
+			li
+				margin-right: 0
+
+		&__up
+			a
+				top: 12px
+
+	.contacts
+		padding: 115px 0 30px
+		&::before
+			top: 0
+			height: 360px
+
+		&__container
+			flex-direction: column
+
+			h2
+				margin-bottom: 20px
+				text-align: center
+
+		&__left
+			width: 100%
+			margin-bottom: 20px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+		&__addres
+			padding-top: 0
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
+			div
+				img
+					margin-right: 20px
+
+		&__place
+			margin-bottom: 15px
+
+		&__tel
+			margin-bottom: 15px
+
+		&__right
+			width: 100%
+			padding: 0
+
+			textarea
+				height: 160px !important
+
+		&__btn
+			margin-top: 25px
+
+
+@media only screen and (max-width : 767px)
+
+	.header
+		padding: 5px 0
+
+		&--active
+			.nav
+				background: rgba(255,255,255,.8)
+
+			.header__catalog
+				top: 0
+
+		&__catalog
+			position: relative
+			left: 0
+			right: 0
+			width: 100%
+
+			a
+				padding: 0 5px
+				font-size: 15px
+
+		&__article
+			&_category
+				h4
+					padding-left: 5px
+					font-size: 17px
+					padding-bottom: 5px
+
+		&__left
+			display: none
+
+		&__nav
+			display: block
+			display: flex
+			flex-direction: column
+			padding-right: 0
+
+			a
+				margin-bottom: 10px
+
+				span
+					top: -5px
+					left: 57px
+
+	.nav
+		top: 72px
+		background-color: #fff
+		width: 100%
+
+	.hero
+		padding: 115px 0 50px
+
+		&__container
+			text-align: center
+
+			img
+				display: none
+
+	.tabs
+		padding-bottom: 70px
+
+		h3
+			margin-bottom: 20px
+
+		&__cover
+
+			.active
+
+				span
+					left: 0
+					width: 100%
+
+		.swiper-container
+			padding-top: 35px
+
+			.swiper-scrollbar
+				bottom: -40px
+
+	.reviews
+		padding-bottom: 40px
+
+		&__container
+
+			h3
+				margin-bottom: 20px
+
+		&__form
+			margin-top: 0
+
+			&_up
+				flex-direction: column
+				margin-bottom: 10px
+
+				input
+					width: 100%
+
+				.stars
+					display: flex
+					justify-content: space-between
+					width: 100%
+					padding-top: 10px
+
+					p
+						margin: 0
+
+	.footer
+		padding: 25px 0
+
+		&__logo
+			display: none
+
+		&__up
+
+			a
+				top: 15px
+
+			span
+				width: 40px
+				height: 40px
+
+				&::before
+					top: 5px
+					right: 14px
+
+			p
+				padding-top: 5px
+
+
+@media only screen and (max-width : 576px)
+	
+	.hits__slider
+		.swiper-slide
+			&:hover
+				transform: scale(1, 1.1)
+
+	.tabs
+		.container
+			.swiper-slide
+				&:hover
+					transform: scale(1, 1.1)
+
+				div
+					right: 25px
+
+	.footer
+		&__up
+			a
+				top: 14px
+				right: 20px
+
+	.about
+		padding-top: 85px
+
+		h2
+			margin-bottom: 15px
+
+		&__footer
+			div
+				width: 90%
+				p
+					margin: 15px 0
+
+
+@media only screen and (max-width : 480px)
+
+	.header
+
+		&--active
+			.nav
+				top: 61px
+
+		&__logo
+			a
+				font-size: 34px
+
+				p
+					padding-left: 85px
+					font-size: 18px
+
+				div
+					span
+						width: 12px
+						height: 12px
+
+	.nav
+		top: 60px
+
+	.hero
+
+		h1
+			font-size: 45px
+
+			span
+				font-size: 30px
+
+	.hits
+		padding: 20px 0 55px
+
+		.swiper-scrollbar
+			bottom: -30px
+
+	.tabs
+
+		&__cover
+			flex-wrap: wrap
+			padding-bottom: 20px
+			border-bottom: none
+
+			li
+				width: 50%
+				border-bottom: 1px solid #e1e1e1
+				padding: 10px 0
+
+			.active
+				span
+					bottom: -16px
+
+	.reviews
+
+		&__left
+
+			.chat__content
+
+				span
+					font-size: 60px
+
+				p
+					font-size: 16px
+
+				&_pane
+					padding: 30px 0
+
+				&_kto
+					img
+						margin-right: 5px
+
+	.footer
+
+		&__nav
+			a
+				font-size: 15px
+
+		&__end
+			a
+				padding: 10px
+
+
+	.about
+
+		&__footer
+			div
+				width: 95%
+				p
+					font-size: 18px
+
+	.contacts
+		padding-top: 80px
+
+		&__right
+			&_input
+				flex-direction: column
+				margin-bottom: 15px
+
+				span
+					width: 100%
+
+					&:first-child
+						margin-bottom: 15px

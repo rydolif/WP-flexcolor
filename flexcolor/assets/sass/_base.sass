@@ -1,0 +1,104 @@
+@import "fonts"
+
+
+//----------------------fonts---------------------
+$fonts: 'Arsenal', sans-serif
+$mon: 'Montserrat', sans-serif
+$osla: 'Oswald', sans-serif
+//---------------------end-fonts---------------------
+
+//----------------------color---------------------
+$accent: #00aeef
+$text: #000000
+
+//---------------------end-color---------------------
+
+body
+	overflow-x: hidden
+	position: relative
+	min-width: 320px
+	font-family: $fonts
+	font-size: 14px
+	color: $text
+	line-height: 1.5
+	font-weight: 400
+
+::selection
+	background-color: $accent
+	color: #fff
+
+main
+	overflow: hidden
+	min-height: 85vh
+
+a, div, ul, li, input, textarea
+	&:hover,
+	&:focus
+		outline: none
+
+section
+	overflow: hidden
+	
+h1, h2, h3, h4, h5, h6
+	font-weight: 400
+	line-height: 1.5
+	margin: 0
+	padding: 0
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+i
+	font-style: normal
+	font-size: 16px
+	color: #fff
+
+input, textarea
+	border: 1px solid #d9d9d9
+	border-radius: 5px
+	outline: none
+	box-shadow: none
+	-webkit-appearance: none
+	background-color: #ffffff
+	height: 50px
+	line-height: 50px
+	padding: 0 15px
+	
+	&:focus:required:invalid
+		border-color: #00aeef
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&:required:valid
+		border-color: #00aeef
+		outline: none
+		box-shadow: none
+		-webkit-appearance: none
+
+	&::placeholder
+		color: #000000
+		font-size: 18px
+		color: #c3c3c3
+
+b, strong
+	font-weight: 700
+
+p
+	margin: 0
+	padding: 0
+
+a,
+a:focus,
+a:hover
+	outline: none
+	text-decoration: none
+
+@import "_base/preloader"
+@import "_base/animation"
+@import "_base/btn"
+@import "_base/form"
+@import "_base/modal"
+@import "_base/hamburger"
