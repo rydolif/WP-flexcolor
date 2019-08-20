@@ -1,5 +1,6 @@
 $(function() {
 
+
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {
     $(this).toggleClass('hamburger--active');
@@ -25,6 +26,9 @@ $(function() {
           $('.header').removeClass('header--active');
       }
   });
+  if($(this).scrollTop()>20){
+      $('.header').addClass('header--active');
+  }
 
 //-------------------------скорость якоря---------------------------------------
   $(".click").on("click","a", function (event) {

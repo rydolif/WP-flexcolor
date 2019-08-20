@@ -40,10 +40,6 @@ get_header( 'shop' ); ?>
 				<?php endwhile; // end of the loop. ?>
 
 			</div>
-
-			<div class="single__atributes">
-				asdasdsad
-			</div>
 			
 		</div>
 

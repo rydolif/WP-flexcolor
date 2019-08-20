@@ -20,6 +20,8 @@
 
 <body>
 
+	<span id="top"></span>
+
 	<header class="header">
 		<div class="container">
 			<div class="header__container">
@@ -169,7 +171,7 @@
 				<div class="header__left">
 					<a href="#">РУС</a>
 					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">Вход</a>
-					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/buy.svg" alt=""><span>12</span>135.00 грн</a>
+					<?php cart_link(); ?><?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 				</div>
 
 			</div>

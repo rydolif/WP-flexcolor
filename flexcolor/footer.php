@@ -3,7 +3,7 @@
 		<div class="container footer__container">
 
 			<div class="header__logo footer__logo">
-				<a href="index.html">
+				<a href="<?php echo get_home_url(); ?>">
 					<b>FLEX</b>COLOR
 
 					<div>
@@ -30,11 +30,11 @@
 			</div>
 
 			<div class="footer__right">
-				<div class="footer__end click">
-					<a href="#tabs">Каталог</a>
+				<div class="footer__end">
+					<a href="<?php echo get_home_url(); ?>#tabs">Каталог</a>
 				</div>
 				<div class="footer__up click">
-					<a href="#hero" class="click">
+					<a href="#top" class="click">
 						<span></span>
 						<p>Наверх</p>
 					</a>

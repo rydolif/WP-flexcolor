@@ -65,10 +65,37 @@ if ( post_password_required() ) {
 
 	</div>
 
-	<h2>Описание</h2>
+	<div class="tabs">
 
-	<div class="tovar__description">
-		<?php the_content(); ?>
+		<ul class="tabs__cover">
+			<li><a href="#one">Описание</a></li>
+			<li><a href="#two">Характеристики</a></li>
+			<li><a href="#three">Для дизайнера</a></li>
+		</ul>
+
+		<div id="one" class="tabs__wrap">
+			<?php the_content(); ?>
+		</div>
+		<div id="two" class="tabs__wrap">
+			<?php if( have_rows('characteristics') ): ?>
+				<ul>
+				<?php while( have_rows('characteristics') ): the_row(); 
+					$name = get_sub_field('name');
+					$description = get_sub_field('description');
+				?>
+
+					<li>
+						<b><?php echo $name; ?></b>
+						<span><?php echo $description; ?></span>
+					</li>
+
+				<?php endwhile; ?>
+				</ul>
+			<?php endif; ?>
+		</div>
+		<div id="three" class="tabs__wrap">
+			<?php the_field('desing'); ?>
+		</div>
 	</div>
 
 

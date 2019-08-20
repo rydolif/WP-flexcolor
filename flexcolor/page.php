@@ -93,10 +93,10 @@ get_header();
 				<h3>Каталог</h3>
 
 				<ul class="tabs__cover">
-					<li><a href="#one">Текстиль<span></span></a></li>
-					<li><a href="#two">Полиграфия<span></span></a></li>
-					<li><a href="#three">Интерьер<span></span></a></li>
-					<li><a href="#four">Сувениры<span></span></a></li>
+					<li><a href="#one">Текстиль</a></li>
+					<li><a href="#two">Полиграфия</a></li>
+					<li><a href="#three">Интерьер</a></li>
+					<li><a href="#four">Сувениры</a></li>
 				</ul>
 
 				<div id="one" class="tabs__wrap">
@@ -437,6 +437,7 @@ get_header();
 		</section>
 
 	</main>
+	
 	<script>
 		//-------------swiper---------------------------------------
 		  var swiper = new Swiper('.hits__slider', {

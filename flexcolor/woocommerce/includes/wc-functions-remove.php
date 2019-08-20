@@ -27,3 +27,7 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 //---------------------------------------------title product-----------------------------------------------
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title',  5 );
 
+//---------------------------------------------breadcrumb-----------------------------------------------
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb',  20 );
+//--------------------------------------------breadcrumb-----------------------------------------------
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price',  10 );

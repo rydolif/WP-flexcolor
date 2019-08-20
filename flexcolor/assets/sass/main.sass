@@ -18,7 +18,8 @@
 	overflow: visible
 	z-index: 1001
 
-	&--active
+	&--active,
+	&--menu
 		background-color: rgba(#fff, 1)
 		padding: 5px 0
 		box-shadow: 0 4px 10px rgba($text, .2)
@@ -176,14 +177,23 @@
 			img
 				margin-right: 13px
 
-			span
-				position: absolute
-				top: -7px
-				left: 13px
-				background-color: #00aeef
-				border-radius: 50%
-				padding: 0 4px
-				font-size: 12px
+	.count
+		&__active
+			position: absolute
+			width: 18px
+			height: 18px
+			text-align: center
+			top: -7px
+			left: 13px
+			background-color: #00aeef
+			border-radius: 50%
+			padding: 0 4px
+			font-size: 12px
+			line-height: 18px
+
+		&__price
+			font-size: 18px
+			color: $text
 
 	&__nav
 		display: none
@@ -363,34 +373,62 @@
 		display: flex
 		justify-content: space-between
 		border-bottom: 1px solid #e1e1e1
-		padding-bottom: 40px
+		margin-bottom: 70px		
 
 		li
 			width: 23%
 			text-align: center
 
 		a
+			display: block
 			font-size: 20px
 			color: #cbcdd0
 			font-weight: 700
 			position: relative
+			padding-bottom: 40px
 
-		.active
-			color: #00aeef
-
-			span
+			&::before
+				content: ''
 				position: absolute
-				bottom: -46px
+				bottom: -2.5px
 				left: 50%
 				transform: translate(-50%, 0)
 				width: 170px
 				height: 5px
 				border-radius: 3px
 				background-color: #00aeef
+				opacity: 0
+
+		.active
+			color: #00aeef
+
+			&::before
+				opacity: 1
+	
+	&__wrap
+		font-size: 18px
+		color: #949494
+		
+
+		li
+			border-radius: 10px
+			display: flex
+			padding: 5px 10px
+			background-color: #f2f5f8
+			margin-bottom: 10px
+
+			b
+				width: 30%
+				color: $text
+
+			span
+				width: 65%
+
+			&:nth-child(even)
+				background-color: #ededed
 
 	.swiper-container
 		overflow: visible
-		padding-top: 70px
 
 		.swiper-slide
 			background-color: #f2f5f8
@@ -741,7 +779,6 @@
 	&__container
 		display: flex
 		
-
 		h2
 			font-size: 30px
 			font-family: $osla
@@ -846,8 +883,91 @@
 		justify-content: flex-end
 
 
+.basket
+	padding: 120px 0
+
+	.container
+		max-width: 992px
+
+	h2
+		font-size: 30px
+		font-family: $osla
+		margin-bottom: 20px
+
+	h3
+		font-size: 24px
+		font-family: $osla
+
+	a
+		position: relative
+		z-index: 1
+		color: $text
+
+		&::before
+			content: ''
+			width: 0
+			transform: scale(0)
+			transition: all .3s
+			position: absolute
+			bottom: -2px
+			right: 0
+			left: 0
+			margin: 0 auto
+			width: 50%
+			height: 2px
+			background-color: $accent
+			z-index: -1
+
+		&:hover,
+		&:focus
+			color: $text
+			text-decoration: none
+			&::before
+				transform: scale(1)
+
+	ul
+		font-size: 16px
+		margin-bottom: 30px
+
+	p
+		font-size: 16px
 
 
+	tr
+		border-radius-left-top: 10px
+		background-color: #f2f5f8
+		font-size: 18px
+
+		&:nth-child(even)
+			background-color: #ededed
+
+	td
+		padding: 10px
+
+	.product-remove
+		text-align: center
+		font-size: 36px
+
+		a
+			color: $text 
+			transition: all .6s
+
+			&::before
+				display: none !important
+
+			&:hover,
+			&:focus
+				color: red
+	
+	.product-quantity
+		input
+			text-align: center
+			width: 60px
+			padding: 0 10px
+
+
+
+//---------------------------------wordpress----------------------------------
 .breadcrumbs
 	width: 100%
 	font-size: 24px
@@ -872,6 +992,7 @@
 		font-weight: 700
 		color: $accent
 
+
 .single
 	padding-top: 130px
 
@@ -880,12 +1001,22 @@
 		justify-content: space-between
 		flex-wrap: wrap
 
-	&__wrap
-		width: 32%
-		overflow: hidden
+	.product_cat-tekstil
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+
+	.entry-summary
+		width: 60%
+
+	.type-product
+		margin-bottom: 140px
 
 	&__atributes
 		width: 60%
+
+	.zoomImg
+		display: none !important
 
 
 .flex-control-nav
@@ -894,41 +1025,215 @@
 	list-style-type: none
 	padding-left: 0
 	margin-top: 5px
+	margin-bottom: 0
 
 	li
 		border-radius: 4px
 		background-color: #dbdde0
 		margin: 2.5px
+		
+	.flex-active
+		border: 2px solid $accent
+		box-sizing: border-box
+		transition: all .6s
 
 	img
-		width: 85px
-		height: 85px
+		width: 81px
+		height: 81px
+		border: 2px solid transparent
+		border-radius: 4px
 
-.woocommerce-product-gallery__image
-	margin-bottom: 5px
 
-	a
-		position: relative
-		display: block
-		width: 450px
-		height: 450px
-		background-color: #fff
-		transition: all .6s
-		border-radius: 15px
-		overflow: hidden
+.woocommerce-product-gallery
+	width: 31%
+
+	img
+		max-width: 100%
+		height: auto
+
+	&__image
+		a
+			display: block
+			text-align: center
+			background-color: $accent
+			border-radius: 20px
+
+
+	&__trigger
+		display: none
+
+
+.variations
+	width: 100%
+	margin-bottom: 75px
+
+	.reset_variations
+		position: absolute
+		top: 110%
+		left: 30%
+		font-size: 18px
+		@extend .btn
+		height: 30px
+		line-height: 30px
+		background-color: red
+		border-color: red
 
 		&:hover,
 		&:focus
-			background-color: $accent
+			color: red
+			border-color: red
+
+
+	li
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 35px
+
+		&:last-child
+			margin-bottom: 0
+
+		p
+			&:first-child
+				width: 25%
+
+			&:last-child
+				width: 70%
+
+	label
+		color: #cbcdd0
+		font-size: 24px
+
+	select
+		width: 100%
+		height: 50px
+		border: 2px solid $accent
+		border-radius: 5px
+		color: $accent
+		font-size: 24px
+
+
+.button
+	@extend .btn
+	padding: 0 90px
+
+
+.single_variation_wrap
+	display: flex
+	justify-content: flex-end
+	align-items: center
+
+
+.woocommerce-variation
+	width: 67%
+
+	&-price
+
+		span
+			color: #cbcdd0
+			font-size: 24px
+			width: 25%
+
+	.price
+		span
+			font-size: 42px
+			line-height: 1
+			color: $text
+			font-weight: 700
+
+
+.woocommerce-message
+	margin-bottom: 25px
+	font-size: 18px
+	color: #cbcdd0
+
+
+.shop_table
+	width: 100%
+	margin-bottom: 30px
 
 	img
-		position: absolute
-		left: 50%
-		top: 50%
-		transform: translate(-50%, -50%)
+		width: 80px
+		height: 80px
 
-.woocommerce-product-gallery__trigger
-	display: none
+
+.wc-proceed-to-checkout
+	display: flex
+	justify-content: center
+	margin-top: 30px
+
+
+.coupon
+	display: flex
+
+	input
+		width: 100%
+		margin-right: 15px
+
+	.button
+		white-space: nowrap
+
+
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-additional-fields__field-wrapper
+	p
+		display: flex
+		align-items: center
+		justify-content: space-between
+		color: #cbcdd0
+		font-size: 18px
+		margin-bottom: 15px
+
+	input
+		width: 80%
+
+	.woocommerce-input-wrapper
+		width: 80%
+
+		textarea
+			height: 150px
+			width: 100%
+			resize: none
+
+
+.woocommerce-checkout-payment
+	text-align: center
+	font-size: 16px
+
+
+.woocommerce-form-coupon
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	margin-bottom: 25px
+
+	p
+		width: 100%
+
+	.form-row
+		width: 63%
+		margin-right: 2%
+
+	.form-row-last
+		width: 35%
+		margin-right: 0
+
+	.button
+		padding: 0 20px
+		width: 100%
+
+	input
+		width: 100%
+
+
+.woocommerce-info
+	font-size: 18px
+	margin-bottom: 25px
+
+	a
+		color: $accent
+
 
 
 @import "page"
