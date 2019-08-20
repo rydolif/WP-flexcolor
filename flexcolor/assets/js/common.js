@@ -1,5 +1,13 @@
 $(function() {
 
+//-------------------------------активна ссилка на якій знаходишся для меню---------------------------------------
+  $('.cabinet__nav a').each(function () {
+      var location = window.location.href;
+      var link = this.href; 
+      if(location == link) {
+          $(this).addClass('active');
+      }
+  });
 
 //------------------------------гамбургер-----------------------------
   $('.hamburger').click(function() {

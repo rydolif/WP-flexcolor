@@ -1,46 +1,135 @@
 .modal
-	position: relative
-	overflow: hidden
-	max-width: 320px
-	height: auto
-	padding: 50px
-	background-color: #fff
-	z-index: 1
+	&__cover
+		margin-bottom: 40px !important
 
-	.btn
-		width: 100%
-		padding: 18px 0
-		font-size: 12px
+		li
+			width: 48% !important
 
-	.close
+.plrp_logreg
+	left: 50% !important
+	top: 50% !important
+	transform: translate(-50%, -50%) !important
+
+	.woocommerce-error
 		position: absolute
-		right: -13px
-		top: -13px
-		display: block
-		width: 30px
-		height: 30px
-		box-shadow: 0 0 8px rgba(0, 0, 0, 0.33)
-		background-color: #ffffff
-		border-radius: 50%
-		border: none
+		width: 100%
+		bottom: 30px
+		right: 0
+		left: 0
+		padding: 5px
+		text-align: center
+		background-color: red
+		color: #fff
+
+
+	input
+		width: 100%
+
+	label
+		position: relative
+		padding-left: 50px
+		color: $accent
 		cursor: pointer
-
-		&:hover, &:focus
-			outline: none
-
-			&::before,
-			&::after
-				height: 14px
-
+		margin-bottom: 0
+		margin-right: 0
 
 		&::before,
 		&::after
 			content: ''
 			position: absolute
-			height: 12px
+			left: 0
+
+		&::before
+			width: 15px
+			height: 15px
+			border-radius: 3px
+			border: 1px solid $accent
+
+		&::after
+			width: 9px
+			height: 9px
+			border-radius: 3px
+			border: 1px solid $accent
+			background: $accent
+			left: 3px
+			top: 3px
+			transition: all .6s
+
+	input[type="checkbox"]
+		display: none
+
+	input[type="checkbox"]:checked + label::after
+		transform: scale(1)
+
+	input[type="checkbox"] + label::after
+		transform: scale(0)
+
+	div
+		width: 100% !important
+
+	.button
+		width: auto !important
+
+	#cboxContent
+		position: relative
+		max-width: 620px
+		width: 100%
+		height: auto
+		background-color: #fff
+		z-index: 1
+		border-radius: 30px
+
+	#cboxLoadedContent
+		background: none
+		border: none
+		padding: 0
+
+	#js_login, #js_signup
+		padding: 40px 90px 60px 90px !important
+
+		a
+			transition: all .6s
+			padding-bottom: 20px
+			&:hover, 
+			&:focus
+				color: $accent
+
+	#cboxClose
+		overflow: hidden
+		position: absolute
+		right: 15px
+		top: 15px
+		display: block
+		box-shadow: 0 0 8px rgba(0, 0, 0, 0.33)
+		width: 36px
+		height: 36px
+		background-color: #fff
+		border-radius: 50%
+		border: 2px solid $accent
+		cursor: pointer
+		transition: all .6s
+
+		&:hover, &:focus
+			outline: none
+			transform: rotate(90deg)
+			border-color: red
+
+			&::before,
+			&::after
+				background-color: red
+
+		&::before,
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			background: $accent
+			transition: all .6s
+			border-radius: 4px
+			height: 18px
 			width: 2px
-			background: #000
-			transition: all .3s
 
 		&::before
 			transform: translate(-50%, -50%) rotate(45deg)
@@ -48,5 +137,13 @@
 		&::after
 			transform: translate(-50%, -50%) rotate(-45deg)
 
-.popup_backraund
-	background-color: none
+
+	#cboxContent
+		#cboxClose
+			background: none !important
+
+
+#cboxWrapper,
+#colorbox
+	max-width: 620px
+	width: 620px !important

@@ -170,7 +170,22 @@
 
 				<div class="header__left">
 					<a href="#">РУС</a>
-					<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">Вход</a>
+
+					
+					<div class="header__left_login">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">
+						<?php 
+							$current_user = wp_get_current_user();
+							echo ''         . $current_user->user_login     . '<br />';
+
+							wp_nav_menu( array(
+								'menu'=>'login',
+								'menu_class'=>'list',
+								'theme_location'=>'menu',
+							) );
+						?>
+					</div>
+
 					<?php cart_link(); ?><?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 				</div>
 

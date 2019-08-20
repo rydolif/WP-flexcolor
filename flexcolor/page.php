@@ -287,118 +287,40 @@ get_header();
 					<h3>Слово клиентам</h3>
 
 					<div class="chat__content jspScrollable">
+						<?php
+							$args = array(
+							'post_type' => 'reviews',
+							'posts_per_page' => -1,
+							);
 
-						<div class="chat__content_pane">
-							<span>“</span>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</p>
-							<div class="chat__content_bot">
-								<div>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-								</div>
-								<div class="chat__content_kto">
-									<p>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">
-										Алина, <time datetime="2019-05-24">24/05/2019</time>
-									</p>
-								</div>
-							</div>
-						</div>
+							$query = new WP_Query( $args );
 
-						<div class="chat__content_pane">
-							<span>“</span>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</p>
-							<div class="chat__content_bot">
-								<div>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-								</div>
-								<div class="chat__content_kto">
-									<p>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">
-										Алина, <time datetime="2019-05-24">24/05/2019</time>
-									</p>
-								</div>
-							</div>
-						</div>
+							while ( $query->have_posts() ): $query->the_post();
 
-						<div class="chat__content_pane">
-							<span>“</span>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</p>
-							<div class="chat__content_bot">
-								<div>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-								</div>
-								<div class="chat__content_kto">
-									<p>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">
-										Алина, <time datetime="2019-05-24">24/05/2019</time>
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="chat__content_pane">
-							<span>“</span>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</p>
-							<div class="chat__content_bot">
-								<div>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-								</div>
-								<div class="chat__content_kto">
-									<p>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">
-										Алина, <time datetime="2019-05-24">24/05/2019</time>
-									</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="chat__content_pane">
-							<span>“</span>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-							</p>
-
-							<div class="chat__content_bot">
-								<div>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-								</div>
-								<div class="chat__content_kto">
-									<p>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">
-										Алина, <time datetime="2019-05-24">24/05/2019</time>
-									</p>
-								</div>
-							</div>
-						</div>
+							?>
 						
+							<div class="chat__content_pane">
+								<span>“</span>
+								<?php the_content(); ?>
+								<div class="chat__content_bot">
+									<p class="chat__content_kto">
+										<?php if ( has_post_thumbnail() ) {
+											the_post_thumbnail();
+										} else { ?>
+											<img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="<?php the_title(); ?>" />
+										<?php } ?>
+										<b><?php the_title(); ?>, </b>
+										<time datetime="1969-07-16">
+											<?php echo get_the_date('Y-m-d'); ?>
+										</time>
+									</p>
+								</div>
+							</div>
+
+						<?php
+							endwhile; wp_reset_postdata();
+						?>
+
 					</div>
 					
 				</div>
@@ -409,26 +331,11 @@ get_header();
 
 					<div class="reviews__form">
 
-						<div class="reviews__form_up">
-
-							<input type="text" name="name" placeholder="Введите Ваше имя" required>
-							<div class="stars">
-								<p>Оцените  нашу работу</p>
-								<div>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/empty_star.png" alt="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/empty_star.png" alt="">
-								</div>
-							</div>
-							
-						</div>
-
-						<textarea name="content" rows="5" placeholder="Ваш отзыв" data-required="true" required=""></textarea>
-
-						<div class="reviews__btn"><button class="btn">Отправить</button></div>
-						
+						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php the_content(); ?>
+						<?php endwhile; ?>
+						<?php endif; ?>
+					
 					</div>
 					
 				</div>

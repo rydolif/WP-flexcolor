@@ -44,6 +44,33 @@
 		</div>
 	</footer>
 
+	<!-- modal -->
+		<div class="modal tabs" id="modal">
+
+			<button class="close modal_close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<ul class="modal__cover tabs__cover">
+				<li><a href="#login">Войти</a></li>
+				<li><a href="#register">Регистрация</a></li>
+			</ul>
+
+			<div id="login" class="tabs__wrap">
+				<?php 
+					echo do_shortcode('[lsphe-login-form]');
+				?>
+			</div>
+
+			<div id="register" class="tabs__wrap">
+				<?php 
+					echo do_shortcode('[lsphe-signup-form]');
+				?>
+			</div>		
+
+		</div>
+	<!-- modal end-->
 
 	<?php wp_footer(); ?>
 

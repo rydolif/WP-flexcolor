@@ -77,23 +77,25 @@ if ( post_password_required() ) {
 			<?php the_content(); ?>
 		</div>
 		<div id="two" class="tabs__wrap">
-			<?php if( have_rows('characteristics') ): ?>
-				<ul>
-				<?php while( have_rows('characteristics') ): the_row(); 
+			<?php the_field('characteristics'); ?>
+		</div>
+		<div id="three" class="tabs__wrap">
+			<?php if( have_rows('file') ): ?>
+				<ul class="tabs__link">
+				<?php while( have_rows('file') ): the_row(); 
 					$name = get_sub_field('name');
-					$description = get_sub_field('description');
+					$file = get_sub_field('file');
 				?>
 
 					<li>
-						<b><?php echo $name; ?></b>
-						<span><?php echo $description; ?></span>
+						<a href="<?php echo $file; ?>" target="_blank">
+							<b><?php echo $name; ?></b>
+						</a>
 					</li>
 
 				<?php endwhile; ?>
 				</ul>
 			<?php endif; ?>
-		</div>
-		<div id="three" class="tabs__wrap">
 			<?php the_field('desing'); ?>
 		</div>
 	</div>
