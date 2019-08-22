@@ -22,3 +22,15 @@
   add_action( 'after_setup_theme', 'myfirsttheme_setup' );
   
   
+//------------------подключение шрифтов------------------
+  function wph_add_google_fonts() {
+      if ( !is_admin() ) {
+          wp_register_style('Arsenal', 'https://fonts.googleapis.com/css?family=Arsenal:400,700,800', array(), null, 'all');
+          wp_register_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900', array(), null, 'all');
+          wp_register_style('Oswald', 'https://fonts.googleapis.com/css?family=Oswald:400', array(), null, 'all');
+          wp_enqueue_style('Arsenal');
+          wp_enqueue_style('Montserrat');
+          wp_enqueue_style('Oswald');
+      }
+  }
+  add_action('wp_enqueue_scripts', 'wph_add_google_fonts');

@@ -21,7 +21,7 @@ get_header();
 
 			<div class="container hero__container">
 
-				<h1>Ваш дизайн <br><span>на любой продукции</span></h1>
+				<h1>Ваш дизайн<br><span>на любой продукции</span></h1>
 
 				<div class="click">
 					<a href="#tabs" class="btn hero__btn">Выбрать товар</a>
@@ -344,104 +344,7 @@ get_header();
 		</section>
 
 	</main>
-	
-	<script>
-		//-------------swiper---------------------------------------
-		  var swiper = new Swiper('.hits__slider', {
-		    scrollbar: {
-		      el: '.hits__scrollbar',
-		    },
-		    freeMode: true,
-		    slidesPerView: 3,
-		    spaceBetween: 50,
-		    breakpoints: {
-		    480: {
-		      slidesPerView: 1,
-		      spaceBetween: 10
-		    },
-		    992: {
-		      slidesPerView: 2,
-		      spaceBetween: 20
-		    }
-		  }
-		  });
 
-		  var swiper = new Swiper('.textile__slider', {
-		    scrollbar: {
-		      el: '.textile__scrollbar',
-		    },
-		    freeMode: true,
-		    slidesPerView: 3,
-		    spaceBetween: 50,
-		    breakpoints: {
-		    480: {
-		      slidesPerView: 1,
-		      spaceBetween: 10
-		    },
-		    992: {
-		      slidesPerView: 2,
-		      spaceBetween: 20
-		    }
-		  }
-		  });
-
-		  var swiper = new Swiper('.polegrf__slider', {
-		    scrollbar: {
-		      el: '.polegrf__scrollbar',
-		    },
-		    freeMode: true,
-		    slidesPerView: 3,
-		    spaceBetween: 50,
-		    breakpoints: {
-		    480: {
-		      slidesPerView: 1,
-		      spaceBetween: 10
-		    },
-		    992: {
-		      slidesPerView: 2,
-		      spaceBetween: 20
-		    }
-		  }
-		  });
-
-		  var swiper = new Swiper('.inter__slider', {
-		    scrollbar: {
-		      el: '.inter__scrollbar',
-		    },
-		    freeMode: true,
-		    slidesPerView: 3,
-		    spaceBetween: 50,
-		    breakpoints: {
-		    480: {
-		      slidesPerView: 1,
-		      spaceBetween: 10
-		    },
-		    992: {
-		      slidesPerView: 2,
-		      spaceBetween: 20
-		    }
-		  }
-		  });
-
-		  var swiper = new Swiper('.suver__slider', {
-		    scrollbar: {
-		      el: '.suver__scrollbar',
-		    },
-		    freeMode: true,
-		    slidesPerView: 3,
-		    spaceBetween: 50,
-		    breakpoints: {
-		    480: {
-		      slidesPerView: 1,
-		      spaceBetween: 10
-		    },
-		    992: {
-		      slidesPerView: 2,
-		      spaceBetween: 20
-		    }
-		  }
-		  });
-	</script>
 
 <?php
 get_footer();

@@ -10,10 +10,6 @@
 	<link rel="icon" href="<?php the_field('favicon', 'option'); ?>">
 	<meta name="theme-color" content="#000">
 
-	<link href="https://fonts.googleapis.com/css?family=Arsenal:400,700,800" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Oswald:400" rel="stylesheet">
-
 </head>
 
 	<?php wp_head(); ?>
@@ -146,10 +142,15 @@
 					?>
 
 					<div class="header__left header__nav">
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/vhod.svg" alt="">Вход</a>
-						<div class="hov_ru"><a href="#">ru</a></div>
-						<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/buy.svg" alt=""><span>12</span>135.00 грн</a>
-						<a href="#">РУС</a>
+						<?php 
+							wp_nav_menu( array(
+								'menu'=>'login',
+								'menu_class'=>'list',
+								'theme_location'=>'menu',
+							) );
+						?>
+						<div class="hov_ru"><a href="#">РУС</a></div>
+						<?php cart_link(); ?><?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
 					</div>
 				</nav>
 

@@ -1,25 +1,77 @@
 @media only screen and (max-width : 1440px)
 	.container
-		max-width: 1200px
+		max-width: 1200px !important
 
+	.header__toggle
+		margin-right: 15px
+
+	.nav
+		width: 40%
+
+	.footer
+		&__nav,
+		&__logo,
+		&__right
+			width: auto
+
+		&__up
+			a
+				right: 15px
+	
+	.woocommerce-product-gallery
+		width: 37%
+	
+	.button
+		padding: 0 65px
+
+	.tabs
+		padding-bottom: 80px
+
+		&__cover
+			margin-bottom: 40px
+
+			a
+				padding-bottom: 25px
+
+	.single .type-product
+		margin-bottom: 40px
 
 
 @media only screen and (max-width : 1200px)
+	.single_variation_wrap
+		flex-wrap: wrap
+
+	.woocommerce-variation
+		width: 100%
+		text-align: right
+		margin-bottom: 15px
+
+	.variations
+		margin-bottom: 50px
+
+		li
+			margin-bottom: 20px	
+
+	.container
+		max-width: 992px !important
 
 	.header
 
-		&--active
+		&--active,
+		&--menu
 			nav
 				top: 72px
 
 			.header__catalog
-				top: 0
+				top: 10px
+				right: 100%
 
 		&__toggle
 			margin-right: 0
 
 		&__left
 			padding-right: 75px
+			width: 50%
 
 			a
 				margin-right: 25px
@@ -27,13 +79,17 @@
 		&__catalog
 			width: 750px
 			top: 0
-			left: -345%
+			right: 100%
+			left: auto
 
 		&__article
 
 			&_category
+
 				h4
-					padding-left: 15px
+					margin-left: 0
+					padding-left: 0
+					margin-bottom: 15px
 
 				a
 					padding: 0 15px
@@ -46,12 +102,13 @@
 		flex-direction: column
 		text-align: center
 		right: -100%
-		top: 92px
+		top: 73px
 		z-index: -1
-		background: rgba(#fff, .8)
+		background: #fff
 		transition: all .3s
 		padding: 20px 0px
 		overflow: visible
+		box-shadow: 0 10px 10px rgba($text, .2)
 
 		ul
 			display: flex
@@ -129,14 +186,9 @@
 	.reviews
 
 		&__container
-			flex-direction: column
 
 			h3
 				margin-bottom: 40px
-
-		&__left,
-		&__right
-			width: 100%
 
 		&__left
 			margin-bottom: 25px
@@ -173,6 +225,11 @@
 
 
 @media only screen and (max-width : 992px)
+	.container
+		max-width: 767px !important
+
+	.plrp_logreg #js_login, .plrp_logreg #js_signup
+		padding: 50px 20px!important
 
 	.header
 
@@ -190,8 +247,11 @@
 
 			&_category
 				width: 48%
-				h4
-					padding-bottom: 15px
+				margin-bottom: 15px
+
+		&__logo
+			width: auto
+
 
 	.nav
 		ul
@@ -202,16 +262,23 @@
 		img
 			right: -13%
 
-	.tabs
-		padding-bottom: 120px
-
 	.reviews
 		padding-bottom: 50px
+		&__container
+			flex-direction: column
+
+			h3
+				margin-bottom: 40px
+
+		&__left,
+		&__right
+			width: 100%
 
 	.footer
-
+		padding: 15px 0 30px
 		&__nav
-			flex-direction: column
+			ul
+				flex-direction: column
 
 			li
 				margin-right: 0
@@ -220,8 +287,13 @@
 			a
 				top: 12px
 
+			p
+				padding-top: 5px
+				line-height: 1
+
 	.contacts
 		padding: 115px 0 30px
+
 		&::before
 			top: 0
 			height: 360px
@@ -240,6 +312,7 @@
 			flex-direction: column
 			justify-content: center
 			align-items: center
+			padding-left: 0
 
 		&__addres
 			padding-top: 0
@@ -270,14 +343,39 @@
 
 
 @media only screen and (max-width : 767px)
+	.tabs__wrap
+		font-size: 16px
+
+	#cboxWrapper, #colorbox
+		width: 100% !important
+		max-width: 100%
+
+	#cboxWrapper
+		width: 100% !important
+		max-width: 100% !important
+
+	#colorbox
+		left: 0 !important
+	
+	.plrp_logreg #cboxContent
+		max-width: 520px
+
+	.container
+		max-width: 576px !important
+
+	.variations label
+		font-size: 18px
+
+	.flex-control-nav
+		justify-content: space-around
+
+	.tabs__cover li
+		width: 32%
 
 	.header
 		padding: 5px 0
 
 		&--active
-			.nav
-				background: rgba(255,255,255,.8)
-
 			.header__catalog
 				top: 0
 
@@ -294,9 +392,8 @@
 		&__article
 			&_category
 				h4
-					padding-left: 5px
-					font-size: 17px
-					padding-bottom: 5px
+					font-size: 16px
+					margin-bottom: 10px
 
 		&__left
 			display: none
@@ -306,18 +403,28 @@
 			display: flex
 			flex-direction: column
 			padding-right: 0
+			margin: 0 auto
+
+			ul
+				margin-bottom: 15px
 
 			a
-				margin-bottom: 10px
+				margin-bottom: 15px
+				margin-right: 0
 
 				span
 					top: -5px
 					left: 57px
 
+			.hov_ru
+				margin-bottom: 20px
+
 	.nav
-		top: 72px
+		top: 60px !important
 		background-color: #fff
 		width: 100%
+		overflow: auto
+		padding-bottom: 100px
 
 	.hero
 		padding: 115px 0 50px
@@ -335,6 +442,8 @@
 			margin-bottom: 20px
 
 		&__cover
+			a::before
+				width: 100%
 
 			.active
 
@@ -397,8 +506,50 @@
 			p
 				padding-top: 5px
 
+	.about blockquote p
+		width: 100%
+		margin: 20px 0
 
-@media only screen and (max-width : 576px)
+		br
+			display: none
+
+
+@media only screen and (max-width : 576px)	
+
+	.shop_table img
+		width: 40px
+		height: 40px
+
+	.basket
+		td,
+		th
+			font-size: 16px
+
+	.cabinet
+		padding: 120px 0
+
+		td,
+		th
+			font-size: 14px
+
+		tr .button
+			padding: 0 5px
+
+		&__nav a
+			padding: 0 10px 5px
+
+	.single .entry-summary,
+	.woocommerce-product-gallery
+		width: 100%
+
+	.woocommerce-product-gallery
+		margin-bottom: 20px
+
+	.breadcrumbs
+		margin-bottom: 25px
+
+	.single
+		padding-top: 100px
 	
 	.hits__slider
 		.swiper-slide
@@ -434,9 +585,73 @@
 
 
 @media only screen and (max-width : 480px)
+	.woocommerce-message
+		.button
+			padding: 0
+			width: 100%
+
+	.tabs__wrap
+		font-size: 14px
+
+	.modal__cover
+		margin-bottom: 20px !important
+
+	.woocommerce-additional-fields__field-wrapper,
+	.woocommerce-billing-fields__field-wrapper
+		p
+			flex-wrap: wrap
+
+		label,
+		input,
+		.woocommerce-input-wrapper
+			width: 100%
+	
+	.woocommerce-form-coupon .form-row
+		width: 100% !important
+		margin-right: 0
+		margin-bottom: 10px
+
+	.product-total
+		display: block !important
+
+	.product-name .quantity
+		float: none
+		display: block
+
+
+	.basket
+		td,
+		th
+			display: block
+			text-align: center
+			padding: 5px
+
+		tbody, 
+		thead
+			width: 100%
+
+		.button
+			padding: 0
+			width: 100%
+
+	.shop_table
+		margin-bottom: 20px
+
+	.coupon
+		flex-wrap: wrap
+		justify-content: center
+
+		input
+			margin-right: 0
+			margin-bottom: 15px
+
+	.product-remove
+		position: absolute
+
+	.variations .reset_variations
+		padding: 0 55px
 
 	.header
-
 		&--active
 			.nav
 				top: 61px
@@ -472,16 +687,26 @@
 			bottom: -30px
 
 	.tabs
+		.container
+			.swiper-slide:hover
+				transform: scale(1)
+
+			.swiper-container
+				padding-top: 0
+
 
 		&__cover
 			flex-wrap: wrap
-			padding-bottom: 20px
 			border-bottom: none
+			margin-bottom: 25px
+
+			a
+				padding-bottom: 20px
 
 			li
 				width: 50%
 				border-bottom: 1px solid #e1e1e1
-				padding: 10px 0
+				margin-bottom: 15px
 
 			.active
 				span
@@ -538,3 +763,36 @@
 
 					&:first-child
 						margin-bottom: 15px
+
+	.cabinet
+		padding-bottom: 50px
+
+		thead
+			display: none
+
+		tr
+			width: 100%
+			display: flex
+			flex-wrap: wrap
+			flex-direction: column
+
+		&__nav
+			li
+				border-bottom: 2px solid #e1e1e1
+
+			ul
+				flex-direction: column
+				text-align: center
+				border: none
+
+
+	.my-account
+		&__item
+			width: 100%
+			margin-bottom: 30px
+
+			&:last-child
+				margin-bottom: 0
+
+
+

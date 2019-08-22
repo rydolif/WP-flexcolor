@@ -229,6 +229,9 @@
 			li
 				padding: 0 8px 8px 8px
 
+				&:first-child
+					padding-top: 8px
+
 			.menu-login-container
 				z-index: -1
 
@@ -347,6 +350,9 @@
 			flex-direction: column
 			padding: 20px 0
 			transition: all .6s
+
+			img
+				height: auto
 
 			a
 				color: $text
@@ -498,8 +504,6 @@
 				b
 					color: $accent
 
-
-
 	.swiper-container
 		overflow: visible
 
@@ -524,6 +528,9 @@
 
 				div
 					display: block
+
+			img
+				height: auto
 
 			a
 				color: $text
@@ -923,8 +930,8 @@
 					width: 90%
 					position: absolute
 					bottom: -15px
-					right: 5px
-					left: 5px
+					right: 5%
+					left: 5%
 					transition: all .3s
 					animation: error .3s linear 1 forwards
 					color: #fff
@@ -1411,9 +1418,54 @@
 		margin-bottom: 25px
 
 
+.woocommerce-ResetPassword
+	text-align: center
+
+	input
+		width: 100%
+		max-width: 340px
+
+	.woocommerce-form-row
+		margin-bottom: 15px
+
+
+.woocommerce-error
+	display: inline-block
+
+	li
+		background-color: red
+		padding: 2px 5px
+		border-radius: 5px
+		color: #fff
+		display: inline
+		font-weight: 700
+		
 mark
+	background-color: $accent
+	border-radius: 5px
+	padding: 0 5px
 
+.my-account
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
 
+	&__item
+		width: 48%
+
+	label
+		width: 100%
+		text-align: left
+
+	input
+		width: 100%
+		margin-bottom: 15px
+
+	.woocommerce-form__label-for-checkbox 
+		display: none
+
+	.form-row
+		text-align: right
 
 
 @import "page"

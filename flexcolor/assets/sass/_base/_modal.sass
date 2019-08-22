@@ -6,10 +6,13 @@
 			width: 48% !important
 
 .plrp_logreg
-	left: 50% !important
-	top: 50% !important
-	transform: translate(-50%, -50%) !important
 
+	#cboxContent
+		left: 50% !important
+		top: 50% !important
+		transform: translate(-50%, -50%) !important
+		margin-top: 0
+		
 	.woocommerce-error
 		position: absolute
 		width: 100%
@@ -25,44 +28,6 @@
 	input
 		width: 100%
 
-	label
-		position: relative
-		padding-left: 50px
-		color: $accent
-		cursor: pointer
-		margin-bottom: 0
-		margin-right: 0
-
-		&::before,
-		&::after
-			content: ''
-			position: absolute
-			left: 0
-
-		&::before
-			width: 15px
-			height: 15px
-			border-radius: 3px
-			border: 1px solid $accent
-
-		&::after
-			width: 9px
-			height: 9px
-			border-radius: 3px
-			border: 1px solid $accent
-			background: $accent
-			left: 3px
-			top: 3px
-			transition: all .6s
-
-	input[type="checkbox"]
-		display: none
-
-	input[type="checkbox"]:checked + label::after
-		transform: scale(1)
-
-	input[type="checkbox"] + label::after
-		transform: scale(0)
 
 	div
 		width: 100% !important
@@ -108,6 +73,7 @@
 		border: 2px solid $accent
 		cursor: pointer
 		transition: all .6s
+		margin-right: 0 !important
 
 		&:hover, &:focus
 			outline: none
@@ -147,3 +113,31 @@
 #colorbox
 	max-width: 620px
 	width: 620px !important
+
+
+
+#login1
+	float: none !important
+
+.form-row__line
+	display: flex
+	align-items: center
+	justify-content: flex-end
+
+
+.lost_password
+	text-align: right !important
+	
+
+	a
+		font-size: 16px
+
+		&:hover,
+		&:focus
+			text-decoration: underline
+
+
+
+
+
+
