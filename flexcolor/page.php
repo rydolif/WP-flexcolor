@@ -27,7 +27,7 @@ get_header();
 					<a href="#tabs" class="btn hero__btn">Выбрать товар</a>
 				</div>
 
-				<div>
+				<div class="hero__img">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero1.png" alt="">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero2.png" alt="">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero3.png" alt="">

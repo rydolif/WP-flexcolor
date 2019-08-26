@@ -6,3 +6,21 @@
 @import "../libs/swiper/swiper.min.css"
 // @import "../libs/animation/animate.min.css"
 @import "../libs/jscrollpane/jquery.jscrollpane.css"
+
+
+.jspTrack
+	position: relative
+	background-color: #fff
+
+	&::before
+		content: ''
+		position: absolute
+		left: 50%
+		transform: translate(-50%, 0)
+		width: 2px
+		height: 100%
+		background-color: #e1e1e1
+
+
+.jspVerticalBar
+	background: #fff

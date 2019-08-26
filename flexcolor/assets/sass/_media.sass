@@ -1,4 +1,23 @@
+@media only screen and (max-width : 1920px)
+	.header
+		background-color: transparent
+
+	.hero
+		background-image: url(../img/hero--bg.jpg)
+		background-repeat: no-repeat
+		background-position: center bottom
+		background-color: #fff
+		padding-bottom: 330px
+
+		&__img
+			display: none
+
+	.hits
+		padding-top: 0
+
+
 @media only screen and (max-width : 1440px)
+
 	.container
 		max-width: 1200px !important
 
@@ -6,7 +25,7 @@
 		margin-right: 15px
 
 	.nav
-		width: 40%
+		width: 43%
 
 	.footer
 		&__nav,
@@ -36,8 +55,15 @@
 	.single .type-product
 		margin-bottom: 40px
 
+	.chat__content
+		width: 500px
+
 
 @media only screen and (max-width : 1200px)
+	.tabs .swiper-slide::before
+		width: 260px
+		height: 60px
+
 	.single_variation_wrap
 		flex-wrap: wrap
 
@@ -130,7 +156,10 @@
 		display: block
 
 	.hero
+		margin-top: 80px
 		z-index: 1
+		padding: 180px 0
+		background-size: cover
 
 		img
 			top: 15%
@@ -144,7 +173,7 @@
 				display: none
 
 	.hits
-		padding: 30px 0 120px
+		padding-bottom: 0
 
 		h3
 			margin-bottom: 40px
@@ -343,6 +372,20 @@
 
 
 @media only screen and (max-width : 767px)
+	.tabs .swiper-container .swiper-slide
+		&:focus, 
+		&:hover
+			transform: scale(1)
+
+	.hits__slider .swiper-slide
+		&:focus, 
+		&:hover
+			transform: scale(1)
+
+	.tabs .swiper-container .swiper-slide div
+		right: 15px
+	
+
 	.tabs__wrap
 		font-size: 16px
 
@@ -427,7 +470,9 @@
 		padding-bottom: 100px
 
 	.hero
-		padding: 115px 0 50px
+		padding: 50px 0
+		background-image: none
+		background-color: #f2f5f8
 
 		&__container
 			text-align: center
@@ -515,7 +560,10 @@
 
 
 @media only screen and (max-width : 576px)	
-
+	.tabs .swiper-slide::before
+		width: 220px
+		height: 50px
+		
 	.shop_table img
 		width: 40px
 		height: 40px

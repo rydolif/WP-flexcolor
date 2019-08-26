@@ -64,15 +64,16 @@ input, textarea
 	height: 50px
 	line-height: 50px
 	padding: 0 15px
+	color: #000000
 	
 	&:focus:required:invalid
-		border-color: #00aeef
+		border-color: red
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&:required:valid
-		border-color: #00aeef
+		border-color: $accent
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
@@ -84,6 +85,8 @@ input, textarea
 
 textarea
 	line-height: 1.4
+	padding-top: 10px
+	font-size: 18px
 
 	&::placeholder
 		line-height: 1.4

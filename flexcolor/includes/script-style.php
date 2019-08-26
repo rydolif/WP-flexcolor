@@ -25,9 +25,9 @@
 //------------------подключение шрифтов------------------
   function wph_add_google_fonts() {
       if ( !is_admin() ) {
-          wp_register_style('Arsenal', 'https://fonts.googleapis.com/css?family=Arsenal:400,700,800', array(), null, 'all');
-          wp_register_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,700,800,900', array(), null, 'all');
-          wp_register_style('Oswald', 'https://fonts.googleapis.com/css?family=Oswald:400', array(), null, 'all');
+          wp_register_style('Arsenal', 'https://fonts.googleapis.com/css?family=Arsenal:400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext', array(), null, 'all');
+          wp_register_style('Montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext', array(), null, 'all');
+          wp_register_style('Oswald', 'https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext,latin-ext', array(), null, 'all');
           wp_enqueue_style('Arsenal');
           wp_enqueue_style('Montserrat');
           wp_enqueue_style('Oswald');

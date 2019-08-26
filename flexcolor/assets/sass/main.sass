@@ -12,15 +12,15 @@
 	position: fixed
 	right: 0
 	left: 0
-	background-color: #ffffff
 	padding: 15px 0
 	transition: all .6s
 	overflow: visible
 	z-index: 1001
+	background-color: #fff
 
 	&--active,
 	&--menu
-		background-color: rgba(#fff, 1)
+		background-color: #fff !important
 		padding: 5px 0
 		box-shadow: 0 4px 10px rgba($text, .2)
 
@@ -302,10 +302,10 @@
 
 
 .hero
-	background-color: #f2f5f8
-	padding: 240px 0
+	padding: 350px 0 240px
 	position: relative
 	overflow: visible
+	background-color: #f2f5f8
 
 	h1
 		font-size: 70px
@@ -325,13 +325,15 @@
 		&:nth-child(2)
 			top: 21%
 			right: 18%
+
 		&:nth-child(3)
-			top: 0%
-			right: 15%
+			top: 115px
+			right: 13%
 
 
 .hits
-	padding: 100px 0 180px
+	padding-top: 100px
+	padding-bottom: 180px
 
 	h3
 		font-size: 30px
@@ -507,89 +509,109 @@
 	.swiper-container
 		overflow: visible
 
-		.swiper-slide
-			background-color: #f2f5f8
-			border-radius: 15px
-			display: flex
-			justify-content: center
-			align-items: center
-			flex-direction: column
-			padding: 20px 0
+	.swiper-slide
+		background-color: #f2f5f8
+		border-radius: 15px
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		padding: 20px 0
+		transition: all .9s
+
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 320px
+			height: 70px
+			background-image: url(../img/decor.png)
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			opacity: 0
+			transition: all .6s
+			z-index: 1
+
+
+		&:hover,
+		&:focus
+			background-color: #00aeef
+			transform: scale(1.1, 1.1)
 			transition: all .9s
 
-			&:hover,
-			&:focus
-				background-color: #00aeef
-				transform: scale(1.1, 1.1)
-				transition: all .9s
-
-				a
-					color: #ffffff
-
-				div
-					display: block
-
-			img
-				height: auto
+			&::before
+				opacity: 1
 
 			a
-				color: $text
-				font-size: 20px
-				position: relative
+				color: #ffffff
 
 			div
-				position: absolute
-				bottom: 19px
-				right: 0
-				display: none
-				span
-					position: relative
-
-					&:nth-child(2)
-						&::before
-							display: none
-						&::after
-							top: 3px
-							right: 3px
-							transform: rotate(0deg)
-							width: 18px
-
-					&::before
-						content: ''
-						position: absolute
-						right: 0px
-						top: -1px
-						transform: rotate(35deg)
-						width: 13px
-						height: 2px
-						background-color: #fff
-						transition: all .6s
-
-					&::after
-						content: ''
-						position: absolute
-						right: 0px
-						top: 7px
-						transform: rotate(135deg)
-						width: 12px
-						height: 2px
-						background-color: #fff
-						transition: all .6s
-
-			img
-				margin: 0 auto
 				display: block
 
-			.no
-				width: 77%
+		img
+			height: auto
 
-		.swiper-scrollbar
-			width: 100%
-			bottom: -70px
-			left: 0
+		a
+			color: $text
+			font-size: 20px
+			position: relative
 
-			&-drag
-				background-color: #00aeef
+		div
+			position: absolute
+			bottom: 19px
+			right: 0
+			display: none
+			span
+				position: relative
+
+				&:nth-child(2)
+					&::before
+						display: none
+					&::after
+						top: 3px
+						right: 3px
+						transform: rotate(0deg)
+						width: 18px
+
+				&::before
+					content: ''
+					position: absolute
+					right: 0px
+					top: -1px
+					transform: rotate(35deg)
+					width: 13px
+					height: 2px
+					background-color: #fff
+					transition: all .6s
+
+				&::after
+					content: ''
+					position: absolute
+					right: 0px
+					top: 7px
+					transform: rotate(135deg)
+					width: 12px
+					height: 2px
+					background-color: #fff
+					transition: all .6s
+
+		img
+			margin: 0 auto
+			display: block
+
+		.no
+			width: 77%
+
+	.swiper-scrollbar
+		width: 100%
+		bottom: -70px
+		left: 0
+
+		&-drag
+			background-color: #00aeef
 
 
 .reviews
@@ -651,11 +673,12 @@
 
 .chat__content
 	height: 430px
-	width: 576px
+	width: 640px
 
 	&_pane
 		position: relative
 		padding: 30px 0
+		margin-right: 40px
 
 	span
 		font-size: 100px
@@ -1459,7 +1482,7 @@ mark
 
 	input
 		width: 100%
-		margin-bottom: 15px
+		margin-bottom: 35px
 
 	.woocommerce-form__label-for-checkbox 
 		display: none

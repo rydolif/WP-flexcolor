@@ -18,6 +18,15 @@
 
 	<span id="top"></span>
 
+	<div class="preloader">
+		<div class="pulse">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+
 	<header class="header">
 		<div class="container">
 			<div class="header__container">

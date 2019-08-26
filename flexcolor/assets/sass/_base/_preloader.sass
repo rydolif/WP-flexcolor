@@ -8,39 +8,41 @@
 	background-color: #fff
 
 .pulse
-	position: relative
-	left: 50%
-	top: 50vh
-	margin: -40px 0 0 -40px
-
-.pulse::before, .pulse::after
-	content: ''
-	border: 5px solid $accent
-	height: 80px
-	width: 80px
-	border-radius: 50%
 	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	display: flex
 
-.pulse::before
-	animation: pulse-outer .8s ease-in infinite
+	span
+		display: block
+		height: 40px
+		width: 40px
+		border-radius: 50%
+		background-color: #00aeef
+		margin-right: 15px
+		animation: pulse-inner 1s linear forwards
 
-.pulse::after
-	animation: pulse-inner .8s ease-in infinite
+		&:nth-child(2)
+			background-color: #ff00ff
+			animation: pulse-inner 1s linear forwards
+			animation-delay: 1s
 
+		&:nth-child(3)
+			background-color: #fff200
+			animation: pulse-inner 1s linear forwards
+			animation-delay: 2s
 
-@keyframes pulse-outer
-		0%
-			opacity: .1
-		50%
-			opacity: .5
-		100%
-			opacity: 0
+		&:nth-child(4)
+			background-color: $text
+			animation: pulse-inner 1s linear forwards
+			animation-delay: 3s
+			margin-right: 0
+	
 
 
 @keyframes pulse-inner
-		0%
-			opacity: 1
-			transform: scale(0)
-		100%
-			opacity: 0
-			transform: scale(1)
+	0%
+		transform: scale(0)
+	100%
+		transform: scale(1)
